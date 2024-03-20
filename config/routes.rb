@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # get "home/index"
   # get 'home' => 'home#index'
   root 'home#index'
+  resources :employees
 
   # get 'pages/about_us'
   # get 'pages/contact_us'
