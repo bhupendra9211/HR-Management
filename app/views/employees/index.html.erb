@@ -1,0 +1,27 @@
+<div class="card rounded-0 mt-5 mb-5">
+    <div class="card-body">
+        <h2 class="text-center">Listing Employees Details</h2>
+    </div>
+</div>
+<table class ="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @employees.each do |employee|%>
+            <tr>
+                <td> <%= employee.first_name %> <%= employee.middle_name %> <%= employee.last_name %> </td>
+                <td> <%= employee.personal_email %> </td>
+                <td> <%= employee.country %> </td>
+                <td> <%= employee.city %> </td>
+                <td> <%= employee.address_line_1 %> </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
