@@ -1,0 +1,20 @@
+<div class="col-lg-12">
+    <div class="card rounded-0 mt-5 mb-5">
+        <div class="card-body">
+            <h2 class="text-center">Create New Employee</h2>
+        </div>
+    </div>
+</div>
+
+<%= simple_form_for @employees do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :middle_name %>
+  <%= f.input :last_name %>
+  <%= f.input :personal_email %>
+  <%= f.input :country %>
+  <%= f.input :city %>
+  <%= f.input :address_line_1 %>
+  <%= f.input :address_line_2 %>
+  <%= f.button :submit %>
+<% end %>
+<%= link_to 'Back to Employees',employees_path %>
