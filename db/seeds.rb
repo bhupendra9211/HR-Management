@@ -7,11 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Employee.create(
+employee = Employee.new(
   first_name: 'Sibani',
   middle_name: "Kumari",
   last_name: "Sah",
-  personal_email: "dfdfdni@gmail.com",
+  personal_email: "example@gmail.com",
   district: "dhanush",
   zone:"janakpur",
   province:"2",
