@@ -22,7 +22,7 @@ class EmployeesController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
     if @employee.update(employee_params)
-      redirect_to employees_path
+      redirect_to employees_path, notice: 'Employee has been updated successfully'
     else
       render :edit
     end

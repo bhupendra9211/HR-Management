@@ -41,6 +41,7 @@
                     <td class="px-6 py-4"><%= employee.full_address%></td>
                     <td class="px-6 py-4 text-red-600">
                         <%= link_to "Edit", edit_employee_path(employee) %>
+                        <%= link_to "Show", employee_path(employee) %>
                         <%= link_to "Destroy", employee_path(employee),method: :delete, data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"

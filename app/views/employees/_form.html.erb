@@ -1,0 +1,71 @@
+<%= form_with model: employee do |form| %>
+<% if @employee.errors.any? %>
+    <p class="text-red-600">Please Fix the error belows :</p>
+    <%# <% @employee.errors.full_messages.each do |message| %>
+      <%# <div class="text-red-600"><%= message %> 
+    <%# <% end  %> 
+<% end %>
+
+    <%= form.label :first_name%>:
+    <%= form.text_field :first_name%>
+    <% @employee.errors.full_messages_for(:first_name).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %>
+
+    <%= form.label :middle_name%>
+    <%= form.text_field :middle_name%>
+    <% @employee.errors.full_messages_for(:middle_name).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %>
+
+    <%= form.label :last_name%>
+    <%= form.text_field :last_name%><br>
+    <% @employee.errors.full_messages_for(:last_name).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %>
+
+    <%= form.label :Email%>
+    <%= form.text_field :personal_email%>
+    <% @employee.errors.full_messages_for(:personal_email).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :District%>
+    <%= form.text_field :district%>
+    <% @employee.errors.full_messages_for(:district).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :Zone%>
+    <%= form.text_field :zone%>
+    <% @employee.errors.full_messages_for(:zone).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :Province%>
+    <%= form.text_field :province%>
+    <% @employee.errors.full_messages_for(:province).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :TemporaryAddress%>
+    <%= form.text_field :temporary_address%>
+    <% @employee.errors.full_messages_for(:temporary_address).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :PermanentAddress%>
+    <%= form.text_field :permanent_address%>
+    <% @employee.errors.full_messages_for(:permanent_address).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+
+    <%= form.label :Country%>
+    <%= form.text_field :country%>
+    <% @employee.errors.full_messages_for(:country).each do |message| %>
+      <div class="text-red-600"><%= message %></div>
+    <% end %><br>
+    
+    <%= form.submit %><br>
+    <%= link_to 'Back to Employees', employees_path%>
+<% end %>
