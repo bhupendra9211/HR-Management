@@ -5,12 +5,14 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js',
     '*.html.erb',
-    './node_modules/flowbite/**/*.js'
+    './node_modules/flowbite/**/*.js',
+    './src/**/*.html',
+
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    // require('flowbite/plugin')
+    require('flowbite/plugin')
   ],
 }
